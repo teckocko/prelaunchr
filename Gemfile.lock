@@ -48,6 +48,19 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.3)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rbenv (2.0.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -99,6 +112,9 @@ GEM
     method_source (0.8.2)
     mime-types (1.21)
     multi_json (1.6.1)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyamorous (0.5.0)
@@ -147,8 +163,15 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
+    term-ansicolor (1.3.2)
+      tins (~> 1.0)
     thor (0.17.0)
     tilt (1.3.4)
+    tins (1.6.0)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
@@ -168,6 +191,10 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  capistrano (~> 3.1.0)
+  capistrano-bundler (~> 1.1.2)
+  capistrano-rails (~> 1.1.1)
+  capistrano-rbenv (~> 2.0)
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
   pg
@@ -176,3 +203,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   unicorn
+
+BUNDLED WITH
+   1.10.6
