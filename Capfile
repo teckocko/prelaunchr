@@ -8,7 +8,7 @@ require 'capistrano/rails'
 
 # If you are using rbenv add these lines:
 require 'capistrano/rbenv'
-set :rbenv_type, :deployer
+set :rbenv_type, :user
 set :rbenv_ruby, '1.9.3-p429'
 
 # If you are using rvm add these lines:
