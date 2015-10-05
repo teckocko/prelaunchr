@@ -18,7 +18,7 @@ test:
 
 production:
   adapter: postgresql
-  database: prelaunchr
+  database: prelaunchr_production
   host: localhost
   user: deployer
   password: password
